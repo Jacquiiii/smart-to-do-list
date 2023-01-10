@@ -12,7 +12,7 @@ The solution? A smart, auto-categorizing todo list app which sorts the task into
 
 ## Getting Started
 
-1. Clone a copy of this repo to your local machine
+1. Fork and clone a copy of this repo to your local machine
 3. Create a .env file with your correct local information:
     - DB_HOST=localhost
     - DB_USER=enter user
