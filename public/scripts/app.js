@@ -10,6 +10,16 @@ const escape = (str) => {
   return div.innerHTML;
 };
 
+// displays all tasks on the page
+const show = () => {
+  $('.watch-container').show();
+  $('.read-container').show();
+  $('.eat-container').show();
+  $('.buy-container').show();
+  $('.unknown-container').show();
+  $('.completed-container2').show();
+};
+
 
 // places get request to obtain data from /tasks and uses the render tasks function to load them on the page
 const loadTasks = function() {
@@ -163,6 +173,116 @@ $(document).ready(function () {
       $(".new-task-input").val("");
       loadTasks();
     });
+  });
+
+
+  $(document).on("click", ".movie-filter", function (event) {
+    event.preventDefault();
+
+    show();
+    $('.read-container').hide();
+    $('.eat-container').hide();
+    $('.buy-container').hide();
+    $('.unknown-container').hide();
+    $('.completed-container2').hide();
+
+  });
+
+  $(document).on("click", ".movie-filter", function (event) {
+    event.preventDefault();
+
+    show();
+    $('.read-container').hide();
+    $('.eat-container').hide();
+    $('.buy-container').hide();
+    $('.unknown-container').hide();
+    $('.completed-container2').hide();
+
+  });
+
+
+  // task filters
+  $(document).on("click", ".movie-filter", function (event) {
+    event.preventDefault();
+
+    show();
+    $('.read-container').hide();
+    $('.eat-container').hide();
+    $('.buy-container').hide();
+    $('.unknown-container').hide();
+    $('.completed-container2').hide();
+
+  });
+
+
+  $(document).on("click", ".book-filter", function (event) {
+    event.preventDefault();
+
+    show();
+    $('.watch-container').hide();
+    $('.eat-container').hide();
+    $('.buy-container').hide();
+    $('.unknown-container').hide();
+    $('.completed-container2').hide();
+
+  });
+
+
+  $(document).on("click", ".eat-filter", function (event) {
+    event.preventDefault();
+
+    show();
+    $('.watch-container').hide();
+    $('.read-container').hide();
+    $('.buy-container').hide();
+    $('.unknown-container').hide();
+    $('.completed-container2').hide();
+
+  });
+
+
+  $(document).on("click", ".buy-filter", function (event) {
+    event.preventDefault();
+
+    show();
+    $('.watch-container').hide();
+    $('.read-container').hide();
+    $('.eat-container').hide();
+    $('.unknown-container').hide();
+    $('.completed-container2').hide();
+
+  });
+
+
+  $(document).on("click", ".unknown-filter", function (event) {
+    event.preventDefault();
+
+    show();
+    $('.watch-container').hide();
+    $('.read-container').hide();
+    $('.eat-container').hide();
+    $('.buy-container').hide();
+    $('.completed-container2').hide();
+
+  });
+
+
+  $(document).on("click", ".completed-filter", function (event) {
+    event.preventDefault();
+
+    show();
+    $('.watch-container').hide();
+    $('.read-container').hide();
+    $('.eat-container').hide();
+    $('.buy-container').hide();
+    $('.unknown-container').hide();
+
+  });
+
+
+  $(document).on("click", ".clear-filter", function (event) {
+    event.preventDefault();
+    show();
   });
 
 

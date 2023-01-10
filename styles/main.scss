@@ -33,7 +33,6 @@
 
 .tasks-container {
   display: grid;
-  padding-top: 2em;
   margin-left: 5em;
   margin-right: 5em;
   justify-content: center;
@@ -171,4 +170,42 @@
   background-color: purple;
   box-shadow: rgba(0, 0, 255, 0.774) 0px 30px 60px -12px inset,
     rgba(9, 0, 63, 0.678) 0px 18px 36px -18px inset;
+}
+
+
+// filters
+.filters {
+  padding-top: 4em;
+  padding-left: 6.5em;
+
+  .filter-option {
+    border-radius: 0.3em;
+    border: transparent;
+    padding: 0.4em;
+    color: white;
+    background: -webkit-linear-gradient(top, rgba(38, 38, 38, 0.5), #e6e6e6 25%, #ffffff 38%, rgba(0, 0, 0, 0.25)  63%, #e6e6e6 87%, rgba(38, 38, 38, 0.4));
+    width: 2.25em;
+    cursor: pointer;
+  }
+
+
+  .movie-filter:hover, .book-filter:hover, .eat-filter:hover, .buy-filter:hover, .unknown-filter:hover, .completed-filter:hover, .clear-filter:hover{
+    animation-name: slide;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    cursor: pointer;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
 }
